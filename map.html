@@ -65,7 +65,7 @@ svg:not(:hover) .airport-cell {
 </style>
 
 
-	<link rel="stylesheet" href="/css/bargraph.css">
+	<link rel="stylesheet" href="https://tjschweitzer.github.io/DV_Flight/css/bargraph.css">
 	
 	<script src="http://d3js.org/d3.v3.js"></script>
 	<div id="US_Map" class="toshow"> </div>
@@ -83,7 +83,7 @@ svg:not(:hover) .airport-cell {
 
   <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://d3js.org/topojson.v1.js"></script>
-    <script src="https://rawgit.com/Qinita/examples2/master/airports/queue.js"></script>
+    <script src="https://tjschweitzer.github.io/DV_Flight/queue.js"></script>
 
 
 <script>
@@ -102,9 +102,9 @@ var svg = d3.select("#US_Map").append("svg")
     .attr("width", width)
     .attr("height", height);
 queue()
-    .defer(d3.json, "us-map.json")
-    .defer(d3.csv, "airports.csv")
-    .defer(d3.csv, "flights.csv")
+    .defer(d3.json, "https://tjschweitzer.github.io/DV_Flight/us-map.json")
+    .defer(d3.csv, "https://tjschweitzer.github.io/DV_Flight/airports.csv")
+    .defer(d3.csv, "https://tjschweitzer.github.io/DV_Flight/flights.csv")
     .await(ready); 
 function ready(error, us, airports, flights) {
   var airportById = d3.map(),
