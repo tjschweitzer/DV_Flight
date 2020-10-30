@@ -71,7 +71,7 @@ svg:not(:hover) .airport-cell {
 	<div id="US_Map" class="toshow"> </div>
 
 
-    <p id="clabel3">Welcome welcome! Please click on the airport (on the map) to see the Top 20 destinations!</p>
+    <p id="clabel3">Please click on the airport (on the map) to see the Top 10 destinations!</p>
     <div id="chart4" class="toshow"> </div>
     
 
@@ -148,7 +148,7 @@ function ready(error, us, airports, flights) {
       .data(airports.sort(function(a, b) { return b.count - a.count; }))
     .enter().append("g")
       .attr("class", "airport").on("click", function(d){
-      	        document.getElementById("clabel3").innerHTML = "The airport you choose is "+d.name;
+      	        document.getElementById("clabel3").innerHTML = "The airport you chose is "+d.name;
                 d3.selectAll("text").remove(); 
                 airport.append("svg:text")
                 .attr("x", d.x)

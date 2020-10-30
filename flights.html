@@ -54,7 +54,7 @@ var voronoi = d3.voronoi()
 d3.queue()
     .defer(d3.json, "us-map.json")
     .defer(d3.csv, "airports.csv", typeAirport)
-    .defer(d3.csv, "flights.csv", typeFlight)
+    .defer(d3.csv, "myOutFile.csv", typeFlight)
     .await(ready);
 
 function ready(error, us, airports, flights) {
